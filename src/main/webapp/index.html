@@ -1,10 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHS-HTTPS Enforcer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background: #fff;
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+
+        .venue {
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 30px;
+        }
+
+        .authors {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .author {
+            text-align: center;
+        }
+
+        .author .photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+        }
+
+        .author .photo svg {
+            width: 50px;
+            height: 50px;
+            fill: #999;
+        }
+
+        .author a {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #c0392b;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .author span {
+            font-size: 0.78rem;
+            color: #666;
+        }
+
+        /* Cream box replaces hr */
+        .section-box {
+            background: #fdf6ec;
+            border-radius: 6px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .author .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #c0392b;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #333;
+            margin: 0;
+        }
+
+        .links {
+            margin-top: 24px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .links a {
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .links a.pdf { color: #c0392b; }
+        .links a.ref { color: #2980b9; }
+    </style>
 </head>
 <body>
+
+<h1>SHS-HTTPS Enforcer: Enforcing HTTPS and Preventing MITM Attacks</h1>
+<div class="venue">ACM SIGSOFT Software Engineering Notes · Noviembre 2013</div>
+
+<div class="authors">
+    <div class="author">
+        <div class="photo">
+            <img src="images/A1.jpg" alt="Sugavanesh B.">
+        </div>
+        <a href="autores.html#a1">Sugavanesh B.</a>
+        <span>Senior SWE, Amazon</span>
+    </div>
+
+    <div class="author">
+        <div class="photo">
+            <img src="images/A2.jpg" alt="Hari Prasath R.">
+        </div>
+        <a href="autores.html#a2">Hari Prasath R.</a>
+        <span>R&D Engineer, ABB</span>
+    </div>
+
+    <div class="author">
+        <div class="photo">
+            <img src="images/A3.jpg" alt="Selvakumar S.">
+        </div>
+        <a href="autores.html#a3">Selvakumar S.</a>
+        <span>Profesor, NIT Trichy</span>
+    </div>
+</div>
+
+<div class="section-box">
+    <h2>Problema</h2>
+    <p>Las conexiones HTTPS son seguras porque están encriptadas y previenen ataques MITM (Man In The Middle). Sin embargo, la petición inicial del browser al servidor, necesaria para el "handshake" de encriptación, es vulnerable ya que aún no está encriptada. Este artículo propone un "SHS-HTTPS Enforcer", un proceso demonio que redirige las peticiones antes de salir del cliente para verificar el URL contra una lista de múltiples fuentes. Así, sin importar el browser, la petición es verificada antes de llegar a su destino.</p>
+</div>
+
+<div class="section-box">
+    <h2>Otras Soluciones</h2>
+    <p>Browsers como Google Chrome y Firefox han atacado el problema con listas estáticas de URLs que solo pueden accederse por HTTPS. El problema es que cada browser tiene su propia lista, por lo que un URL puede estar en una pero no en otra, dejando la petición inicial vulnerable según el browser utilizado.</p>
+</div>
+
+<div class="section-box">
+    <h2>Experimento</h2>
+    <p>La solución fue implementada usando el servidor proxy Squid como demonio. Se experimentó con peticiones a URLs que están en la lista de un browser pero no en otros. La solución fue exitosa, asegurando solo conexiones a sitios seguros y previniendo ataques MITM.</p>
+</div>
+
+<div class="links">
+    <a class="pdf" href="css/Articulo.pdf" target="_blank">PDF</a>
+    <a class="pdf" href="autores.html">Autores</a>
+    <a class="ref" href="referencias.html">Referencias</a>
+</div>
 
 </body>
 </html>
