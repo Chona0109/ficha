@@ -1,0 +1,73 @@
+AUTORES
+------A1-------------
+Sugavanesh Balasubramanian
+Senior Software Engineer at Amazon
+About
+Interested in problems of scale and/or speed. Specialised in building large scale machine learning systems, workflow management systems. Have good instincts for different trade-offs to make while building or refactoring services. 
+Currently, I am a Senior Engineer in a team that owns one of the largest Computer Vision driven online recommender systems at Amazon.
+
+Experience
+
+Amazon
+Senior Software Engineer
+Feb 2023 - Present · 2 yrs
+Help making customer shopping journey more meaningful through dynamic recommender and intent understanding systems.
+
+Yatri
+Jagriti Yatra
+Dec 2015 - Jan 2016 · 2 mos
+I was selected as one among 450 yatris for Jagriti Yatra, 2015, a 15 day long, nation-wide train journey that takes us 8000 kilometers around India, to build India of smaller towns and villages through enterprise. 
+* We met with 15 role models, leaders as part of this Yatra.
+* We visited SELCO, KSV, Aravind Eye Care, MSSRF, GITAM, Naval Ship Yard, Akshayapatra, Nalanda University, Gram Vikas, Goonj, Barefoot College, EDI, learnt about their inner-workings and how they operate.
+
+Overall Head
+Vortex '13 
+Jan 2013 - May 2013 · 5 mos
+Organized the National level symposium of Dept. of CSE, NIT Trichy
+
+------A2-------------
+Hari prasath R
+R&D Executive Engineer
+About
+R&D Executive Engineer @ ABB, Ex- LG Electronics
+
+Experience
+
+ABB
+Research And Development Engineer
+Apr 2023 - Feb 2024 · 11 mos
+Research And Development.
+
+LG Soft India
+Embedded Software Developer
+Feb 2023 - Apr 2023 · 3 mos
+Software Developer
+
+Emertxe Information Technologies
+Intern
+Oct 2021 - Aug 2022 · 11 mos
+Internship
+
+------A3-------------
+Selvakumar S
+Professor (HAG) and Former Director, IIIT Una (HP)
+
+About
+Computer Networks, Group communication in High-Speed Networks, Routing, Multimedia Communication, Scheduling for QoS guarantee, Mobile Networks, Network Computing, Distributed Systems, Collaborative Computing, Wireless Sensor Networks, and Network Security
+
+Experience
+
+CSE, National Institute of Technology Tiruchirappalli
+Professor (HAG)
+26.12.2023
+Professor (HAG) and Former Director
+
+Indian Institute of Information Technology Una
+Director
+05-07-2018 to 22-12-2023
+Director
+
+National Institute of Technology
+Professor
+26-08-2000 to 04-07-2018
+Professor

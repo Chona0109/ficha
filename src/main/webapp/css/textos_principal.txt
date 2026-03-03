@@ -1,0 +1,18 @@
+PRINCIPAL
+SHS-HTTPS Enforcer: Enforcing HTTPS and preventing MITM Attacks
+ACM SIGSOFT Software Engineering Notes, November 2013
+
+Sugavanesh B
+Hari Prasath R
+Selvakumar S
+
+Problema
+Las conexiones HTTPS son seguras, pues son encriptadas y previenen problemas como el MITM (Man In The Middle). Sin embargo la petición inicial del browser al servidor, requerida en el proceso de "handshake" para establecerlas llaves de encriptación, es vulnerable (pues claramente aún no está encriptada).
+Este artículo propone el uso de un "SHS-HTTPS Enforcer" que es un proceso tipo "demonio" que redirige las peticiones antes de que salgan del cliente, para verificar el URL en una lista de múltiples fuentes. Así, sin importar  cual browser se esté usando, la petición será verificada antes de dirigirse a su destino final.
+
+Otras soluciones
+Algunos browser (user agents), como Google Chrome y Firefox han atacado el problema
+incluyendo listas estátias de URL's que sólo pueden ser accedidas sobre conexiones seguras HTTPS. El problema es que cada browser tiene su lista. Así un URL puede estar en una lista pero no en otra, y dependiendo del browser que se use la petición inicial podría ser vulnerada.
+
+Experimento
+La solución propuesta ha sido implementada usando como "demonio" servidor proxy Squid. Se ha experimentado con peticiones hacio URL's que están en la lista de un browser pero no en la de otros. La solución ha sido exitosa, asegurándo solo conexiones a sitios seguros y previniendo el problema MITM
